@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import { ReactNode } from "react";
 import {
@@ -9,7 +9,10 @@ import {
 
 export function Room({ children }: { children: ReactNode }) {
   return (
-    <LiveblocksProvider publicApiKey={"pk_dev_rUmMSnu2AbPJvt_4iuX0LDFRfBKnrJnWzGBusaWqXjDamXlWPqe9tQs0ppsjxnEX"}>
+    <LiveblocksProvider
+      publicApiKey={
+        "pk_dev_rUmMSnu2AbPJvt_4iuX0LDFRfBKnrJnWzGBusaWqXjDamXlWPqe9tQs0ppsjxnEX"
+      }>
       <RoomProvider id="my-room">
         <ClientSideSuspense fallback={<div>Loading…</div>}>
           {children}
